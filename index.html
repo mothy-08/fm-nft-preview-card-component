@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>NFT preview card component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="[ card ] [ grid-flow ] [ rounded-outer padding-8 ]">
+      <div class="[ card__image ] [ rounded-inner ]">
+        <img
+          src="images/image-equilibrium.jpg"
+          alt="A prismatic cube standing on the middle that is on one of its edge"
+          width="272"
+          height="272"
+        />
+      </div>
+
+      <h2 class="text-neutral-400 font-semibold">
+        <a href="">Equilibrium #3429</a>
+      </h2>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+
+      <div class="flex-center justify-between">
+        <div class="flex-center gap-2">
+          <img src="images/icon-ethereum.svg" alt="" width="11" height="18" />
+          <data class="text-primary-400 font-semibold" value="0.041">
+            0.041 ETH
+          </data>
+        </div>
+
+        <div class="flex-center gap-2">
+          <img src="images/icon-clock.svg" alt="" width="17" height="17" />
+          <time datetime="P3D">3 days left</time>
+        </div>
+      </div>
+
+      <div class="separator" aria-hidden="true"></div>
+
+      <div class="flex-center gap-4">
+        <img
+          class="rounded-full border"
+          src="images/image-avatar.png"
+          alt="A portrait of a person under sunlight"
+          width="30"
+          height="30"
+        />
+        <p class="text-base">
+          Creation of <a class="text-neutral-400">Jules Wyvern</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

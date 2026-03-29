@@ -1,0 +1,163 @@
+:root {
+  --color-primary-400: hsl(178, 100%, 50%);
+  --color-primary-500: hsl(215, 51%, 70%);
+
+  --color-neutral-400: hsl(0, 0%, 100%);
+  --color-neutral-700: hsl(215, 32%, 27%); /* line */
+  --color-neutral-800: hsl(216, 50%, 16%); /* card */
+  --color-neutral-900: hsl(217, 54%, 11%); /* bg */
+
+  --text-base: 1.125rem;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-semibold: 600;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: currentColor;
+
+  &:hover {
+    color: var(--color-primary-400);
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-light);
+  font-style: normal;
+  font-size: var(--text-base);
+
+  min-height: 100svh;
+
+  display: grid;
+  place-items: center;
+
+  background-color: var(--color-neutral-900);
+  color: var(--color-primary-500);
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* composition */
+.grid-flow {
+  display: grid;
+  gap: 24px;
+}
+
+/* utility */
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.font-semibold {
+  font-weight: var(--font-semibold);
+}
+
+.text-neutral-400 {
+  color: var(--color-neutral-400);
+}
+
+.border {
+  border: 1px solid var(--color-neutral-400);
+}
+
+.rounded-full {
+  border-radius: 50%;
+}
+
+.rounded-outer {
+  border-radius: 16px;
+}
+
+.rounded-inner {
+  border-radius: 8px;
+}
+
+.padding-8 {
+  padding: 24px;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-primary-400 {
+  color: var(--color-primary-400);
+}
+
+/* block */
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-neutral-700);
+}
+
+.card {
+  background-color: var(--color-neutral-800);
+  max-width: 320px;
+}
+
+.card__image {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.card__image:hover::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.7);
+  background-image: url(images/icon-view.svg);
+  background-position: center;
+  background-size: 48px 48px;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 48rem) {
+  .card {
+    max-width: 350px;
+  }
+}
